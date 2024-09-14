@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Server-Side Calculator</title>    
+    <link rel="stylesheet" href="/style.css">
+    <script defer src="scripts/axios.js"></script>
+    <script defer src="scripts/client.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <h1>Server-Side Calculator</h1>
+
+    <form data-testid="calculator">
+      <input id="numOneInput" data-testid="numOne" placeholder="First Number">
+      <button onClick="handleOperatorClick(event, '+')">+</button>
+      <button onClick="handleOperatorClick(event, '-')">-</button>
+      <button onClick="handleOperatorClick(event, '*')">*</button>
+      <button onClick="handleOperatorClick(event, '/')">/</button>
+      <input id="numTwoInput" data-testid="numTwo" placeholder="Second Number">
+      <button onClick="createCalculation(event)">=</button>
+      <button onClick="resetCalculator(event)">C</button>
+    </form>
+
+    <section data-testid="recentResult">
+      <h2 id="currentResult">
+        <!-- The most recent calculation result goes here. -->
+      </h2>
+    </section>
+
+    <section data-testid="resultHistory">
+      <ul id="calculationHistory">
+         <!-- The list of calculation results goes here. -->
+      </ul>
+    </section>
+  </body>
+</html>
